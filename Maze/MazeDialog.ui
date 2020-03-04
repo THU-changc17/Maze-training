@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Maze</class>
+ <widget class="QWidget" name="Maze">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>787</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>541</width>
+     <height>521</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>30</y>
+     <width>111</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QRadioButton" name="easy">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>简单</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="medium">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>中等</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="hard">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>困难</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mode">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>难度模式</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSpinBox" name="spinBox">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>220</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>6</number>
+   </property>
+   <property name="maximum">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="rank">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>220</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>迷宫阶数</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="trap">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>300</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>加入鼠夹</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="fire">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>340</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>加入火焰</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="getmaze">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>380</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 9pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>生成迷宫</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="startlearn">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>520</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 9pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>开始学习</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 18pt &quot;Adobe Arabic&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>570</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 9pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>开始寻找</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="learn">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>470</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>学习轮次</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="epo">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>470</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>10</number>
+   </property>
+   <property name="maximum">
+    <number>10000</number>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="eye">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>430</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>学习动画</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
